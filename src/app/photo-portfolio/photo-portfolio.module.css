@@ -1,0 +1,117 @@
+.canvas {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: clamp(1.5rem, 3vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 4rem);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.7), transparent 40%),
+    var(--bg);
+}
+
+.infoRail {
+  position: sticky;
+  top: clamp(1rem, 3vw, 3rem);
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 20px 60px rgba(12, 12, 12, 0.08);
+}
+
+.overline {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.headlineGroup h1 {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.headlineGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.headlineGroup p {
+  color: var(--muted);
+  max-width: 32ch;
+  font-size: 1rem;
+}
+
+.legend {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.stats div {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.stats dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.stats dd {
+  margin: 0.25rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.scheduleCard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 20px;
+  background: #0c0c0c;
+  color: #f6f1e8;
+}
+
+.scheduleCard h2 {
+  font-size: 1.4rem;
+  margin-top: 0.35rem;
+}
+
+.galleryRail {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 960px) {
+  .canvas {
+    grid-template-columns: 1fr;
+  }
+
+  .infoRail {
+    position: static;
+  }
+}
